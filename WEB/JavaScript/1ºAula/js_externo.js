@@ -1,0 +1,1 @@
+document.write("este comando foi carregado apartir de um script externo");

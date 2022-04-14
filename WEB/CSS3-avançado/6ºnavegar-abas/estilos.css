@@ -1,0 +1,45 @@
+/* globais */
+
+body{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* ----------------- Layout ---------------------- */
+
+ul li{
+   list-style: none;
+   float: left;
+   background: url('/home/dekae/Área de trabalho/Udemy/WEB/CSS3-avançado/6ºnavegar-abas/arquivos-necessarios-navegacao-abas/aba-direita.png') no-repeat top right;
+}
+ul{
+    padding: 0em;
+    margin: 0;
+    
+}
+
+/* ------------------- Links ---------------------- */
+
+li a{
+    background: url('/home/dekae/Área de trabalho/Udemy/WEB/CSS3-avançado/6ºnavegar-abas/arquivos-necessarios-navegacao-abas/aba-esquerda.png') no-repeat top left;
+    text-decoration: none;
+    color: aliceblue;
+    /* background-color: orange; */
+    display: block;
+    padding: 0 2em;
+    line-height: 3em;
+    font-weight: 600;
+}
+ul a:hover{
+    color: rgb(58, 58, 58);
+}
+
+ul .atual
+{
+    background:url('/home/dekae/Área de trabalho/Udemy/WEB/CSS3-avançado/6ºnavegar-abas/arquivos-necessarios-navegacao-abas/aba-direita-atual.png')no-repeat top right;    
+}
+
+ul .atual a{
+    background: url('/home/dekae/Área de trabalho/Udemy/WEB/CSS3-avançado/6ºnavegar-abas/arquivos-necessarios-navegacao-abas/aba-esquerda-atual.png')no-repeat top left ;
+}
+
+/* --------------- Gerais -------------------------- */

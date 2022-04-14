@@ -1,0 +1,36 @@
+/* seletor univer- aplica-se a todos os elementos da pagina */
+*{
+    text-align: center;
+    margin: 10px auto;
+}
+
+/* pegar todos os paragrafos com a classe .verde */
+p.verde{
+    color: green;
+}
+/* afeta todos os linksfilhos de li */
+li>a{
+    color: aqua;
+    text-decoration: none;
+}
+
+/* afesta todos os descente do pai, não so o filho direto */
+.descendente a{
+    color: aqua;
+    text-decoration: none;
+}
+/* Afeta os elementos p depois de h1, do o proximo*/
+.seletor-irmão-adjacente>h1+p{
+    color: blueviolet;
+
+}
+
+/* aplica-se a todos os elementos depois de h1 */
+.Seletor-irmão-geral>h1~p{
+    color: blueviolet;
+}
+
+div{
+    border: 1px solid;
+    width: 300px;
+}
