@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt/br">
+    <head>
+        <title>Funções nativas de strings</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            function mostrar(conteudo){
+                document.write(conteudo)
+                document.write("<br>")
+                document.write("<br>")
+            }
+            // a contagem de caracteres começa no 0
+                var meuNome = 'David Eduard'
+            // propriedade lenght
+                // ela retorna a quantidade de caracteres = tamanho da string
+                mostrar("essa string tem "+meuNome.length+" caracteres")
+            // charAt: retorna a posição do caractere especifíco
+            // funciona como uma função ou "metodo"
+                mostrar("a letra "+meuNome.charAt(4)+" está na posição 4")
+            // indexOf() : fornce a primeira ocorrencia do char informado dentro da string
+                mostrar("A primeira ocorrência de 'a' está na posição: "+meuNome.indexOf('a'))
+                // deve se lembrar que o js diferencia letras maísculas de minusculas
+            // replace(): troca a valor informado por outro.
+                mostrar(meuNome.replace('Eduard','Guetta'))
+            // substr(): extrai parte de uma string, como se fosse uma tesoura
+            // informar o caractere inicial e final para recorte.
+                mostrar(meuNome.substr(5,12))
+            // toLowerCase(): modifica os caracteres, deixando-os em caixa baixa
+                mostrar(meuNome.toLocaleLowerCase())
+            // toUpperCase(): modifica os caracteres, deixando-os em caixa alta.
+                mostrar(meuNome.toUpperCase())
+        </script>
+        <a href='https://www.w3schools.com/js/js_string_methods.asp'>Funções strings</a>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt/br">
+    <head>
+        <title>Eventos Janela</title>
+        <meta charset="utf-8">
+        <script>
+            function tamanhoJanela(){
+                // pega medidas da altura da janela
+                var alturaJanela = window.innerHeight
+                if(alturaJanela == 450){
+                    alert('faça um pix de 1000 reais')
+                }else{}
+            }
+        </script>
+    </head>
+    <!-- onscroll é usado para dar trigger em função da movimentação do scroll -->
+    <body onresize="tamanhoJanela()", onscroll="console.log()">
+        <!-- eventos de janela -->
+        <div style="width: 250px; height: 1500px; background-color: black;"></div>
+        
+
+    </body>
+</html>

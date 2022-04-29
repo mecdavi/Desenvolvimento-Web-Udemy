@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt/br">
+    <head>
+        <title>App Calculadora</title>
+        <meta charset="utf-8">
+        <style>
+            body{
+                background-color: gray;
+                font-family: 'Courier New', Courier, monospace;
+            }
+            #container{
+                margin: 40px auto;
+                width: 270px;
+                height: 530px;
+                border-radius: 5%;
+                background-color: black;
+            }
+            #resultado{
+                display: flex;
+                margin: 20px auto;
+                width: 240px;
+                height: 150px;
+                background-color:black;
+                color: aliceblue;
+                font-size: 2.5em ;
+                text-align:end;
+            }
+            #teclas{
+                margin: 40px auto;
+            }
+            .corLaranja{
+                background-color:#f09a37;
+            }
+            .corCinza{
+                background-color: #333333;
+            }
+            .cinzaClaro{
+                background-color: #a5a5a5;
+                color: black;
+            }
+            .teclasEstilo{
+                width: 100%;
+                margin: 0px auto;
+                text-align: center;
+                padding: 5px;
+            }
+            .teclasGrandes{
+                height: 55px;
+                width: 115px;
+                border-radius: 10%;
+            }
+            .teclasComuns{
+                border-radius: 100%;
+                width: 55px;
+                height: 55px;
+            }
+            button{
+                color: antiquewhite;
+                font-size: 1.5em;
+                font-weight: 900;
+            }
+            button:hover{
+                color: gray;
+                border: 1px solid snow;
+            }
+            input, button{
+                border: none;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div id='container'>
+            <input type="text" id="resultado" disabled>
+            
+            <div id="teclas">
+                <div class="teclasEstilo">
+                    <button type="button" onclick="calculo('apagarTudo')"class="teclasGrandes cinzaClaro">AC</button>
+                    <button type="button" onclick="calculo('acao',' % ')" class="teclasComuns cinzaClaro">%</button>
+                    <button type="button" onclick="calculo('acao',' / ')" class="corLaranja teclasComuns">÷</button>
+                </div>
+                <div class="teclasEstilo">
+                    <button type="button" onclick="calculo('valor',7)" class="teclasComuns corCinza">7</button>
+                    <button type="button" onclick="calculo('valor',8)" class="teclasComuns  corCinza">8</button>
+                    <button type="button" onclick="calculo('valor',9)" class="teclasComuns corCinza">9</button>
+                    <button type="button" onclick="calculo('acao',' * ')" class="teclasComuns corLaranja">x</button>
+                </div>
+                <div class="teclasEstilo">
+                    <button type="button" onclick="calculo('valor',4)" class="teclasComuns corCinza">4</button>
+                    <button type="button" onclick="calculo('valor',5)"class="teclasComuns corCinza">5</button>
+                    <button type="button" onclick="calculo('valor',6)" class="teclasComuns corCinza">6</button>
+                    <button type="button" onclick="calculo('acao',' - ')"class="teclasComuns corLaranja">-</button>
+                </div>
+                <div class="teclasEstilo">
+                    <button type="button" onclick="calculo('valor',1)"class="teclasComuns corCinza">1</button>
+                    <button type="button" onclick="calculo('valor',2)"class="teclasComuns corCinza">2</button>
+                    <button type="button" onclick="calculo('valor',3)"class="teclasComuns corCinza">3</button>
+                    <button type="button" onclick="calculo('acao',' + ')" class="teclasComuns corLaranja">+</button>
+                </div>
+                <div class="teclasEstilo">
+                    <button type="button" onclick="calculo('valor',0)" class="teclasGrandes corCinza">0</button>
+                    <button type="button" onclick="calculo('valor','.')" class="teclasComuns corCinza">.</button>
+                    <button type="button" onclick="calculo('resultadoCalculo')" class="teclasComuns corLaranja">=</button>
+            </div>
+        </div>
+        
+        <script>
+            function calculo(tipo,declaracao){
+                switch(tipo){
+                    case 'valor':
+                        document.getElementById('resultado').value += declaracao 
+                        break
+                    case 'acao':
+                        if(declaracao == ' % '){
+                            porcentagem=parseFloat(document.getElementById('resultado').value)/100
+                            document.getElementById('resultado').value = porcentagem + " * "
+                        }else{
+                        document.getElementById('resultado').value += declaracao
+                        }
+                        break
+                    case 'resultadoCalculo':
+                        let tela = document.getElementById('resultado').value
+                        console.log(tela)
+                        document.getElementById('resultado').value=(eval(tela))
+                        break
+                    case 'apagarTudo':
+                        document.getElementById('resultado').value = ''
+                        break
+                }
+            }
+        </script>
+    </body>
+</html>

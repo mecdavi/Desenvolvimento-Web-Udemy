@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt/br">
+    <head>
+        <title>Eventos Teclado</title>
+        <meta charset="utf-8">
+        <script>
+            function eventosTeclado(){
+                alert('digite apenas numeros nesse campo')
+            }
+            
+        </script>
+    </head>
+    <body>
+        <!-- usadas geralmente para campos de inpute de telefone ou senha -->
+
+        <!-- onkeydown = qualquer tecla pressionada incluindo ctrl - shift - enter -->
+        <h3>onkeydown</h3>
+        <input onkeydown="eventosTeclado()" style="display: flex; margin-bottom: 20px;" type="text" name="" id="">
+        <!-- onekeyup = qualquer tecla pressionada, porem aparece a letra primeiro antes do treigger -->
+        <h3>onkeyup</h3>
+        <input onkeyup="eventosTeclado()" style="display: flex; margin-bottom: 20px;"type="text" name="" id="">
+        <!-- somente teclas válidas = algarismos, da trigger depois aparece o caracter -->
+        <h3>onkeypress</h3>
+        <input onkeypress="eventosTeclado()" style="display: flex; margin-bottom: 20px;"type="text" name="" id="">
+    </body>
+</html>

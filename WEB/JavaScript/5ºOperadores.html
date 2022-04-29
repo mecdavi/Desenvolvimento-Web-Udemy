@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="Pt/br">
+    <head>
+        <title>Operadores</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            function mostrar(conteudos){
+                document.write(conteudos)
+                document.write("<br>")
+            }
+            var numero1 = parseInt(prompt("Digite um numero"))
+            var numero2 = parseInt(prompt("Digite outro numreo"))
+            // modulo retorna o resto da operação de divisão
+            mostrar("o modulo de " + numero1 + " e " + numero2 + " é : " + (numero1%numero2))
+            // adiciona +1 no valor original, so pode ser visto na próxima instrução
+            mostrar("incremento posterior " +(numero1++)+" = "+(numero1))
+            // adiciona +1 na mesma instrução
+            mostrar("Incremento anterior " + (++numero1))
+            // deixar menos verboso
+            //numero1 += 5
+            //%=
+            //-=
+            //*=
+            //+= -> funciona tambem com strings, como concatenador.
+        </script>
+        
+    </body>
+</html>

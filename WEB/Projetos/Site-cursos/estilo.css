@@ -1,0 +1,54 @@
+*{
+    border: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+    font-family: monospace;
+    text-align: center;
+
+
+}
+/* --------------------------------- layout ---------------------------------- */
+body{
+    color: antiquewhite;
+    background:url('../imagens/fundoJs.png')  ;
+}
+#container{
+    height:1000px
+}
+#cabecalho{
+    background: url('../imagens/webdev.png') no-repeat center;
+    display: flex;
+    height: 300px;
+}
+#conteudoSite,#imagensSite{
+    margin: 0 auto;
+    width: 960px;
+    background-color: rgba(2, 2, 2, 0.644) ;
+}
+#rodape{
+    background-color: rgb(126, 126, 126);
+    padding: 15px;
+}
+/* ----------------- gerais ----------------------------------- */
+p{
+    text-align: justify;
+    font-size: 1.2em;
+}
+h2{
+    font-size: 1.5em;
+    margin: 20px 0px;
+    
+}
+img{
+    margin: 0px 55px;
+    width:200px;
+    height: 100px;
+    border-radius: 10px;
+
+}
+
+img:hover{
+    transition: all 0.5s ease;
+    transform: scale(2);
+}

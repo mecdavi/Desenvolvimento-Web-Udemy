@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt/br">
+    <head>
+        <title>4º Deasafio</title>
+        <meta charset="utf-8">
+        <style>
+
+        </style>
+        <script>
+            function inputFocado(cor){
+                var texto = document.getElementById('textoUser')
+                texto.style.backgroundColor = cor
+
+                if  (texto.value.length <= 3 && texto.value.length !== 0 ){
+                    texto.style.backgroundColor = '#f7a2a2'
+
+                }else if(texto.value.length >3){
+                    texto.style.backgroundColor = '#a2f7a2'
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <input type="text" id="textoUser" onfocus="inputFocado('#ffff83')" onblur="inputFocado('') ">
+    </body>
+</html>

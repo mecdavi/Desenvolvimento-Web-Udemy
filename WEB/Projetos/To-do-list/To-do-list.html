@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt/br">
+    <head>
+        <title>To do List</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="estilo.css">
+    </head>
+    <body>
+        <div id="container">
+            <header>
+                <div id='cabecalho'>
+                    <h1>My To do List</h1>
+                        <label >
+                            <input id="nova_tarefa" type="text" placeholder="Digite sua tarefa..." name="" class="input_tarefa"><input type="button" value="Add" onclick="adicionarItem()" class="botao_adicionar" >
+                        </label>
+                </div>
+            </header>
+            <main>
+                <div class="lista">
+                    <ul id="listaTarefas"></ul>
+                </div>
+            </main>
+        </div>
+        <script>
+            function adicionarItem(){
+
+                let nova_tarefa = document.getElementById("nova_tarefa").value
+                let vetor_adicionar_item = Array(nova_tarefa)
+                let lista_tarefas_id = document.getElementById('listaTarefas').innerHTML
+
+                document.getElementById('nova_tarefa').value = ''
+
+                if (nova_tarefa!='' ){
+
+                    //vetor_adicionar_item.push(nova_tarefa)
+                    lista_tarefas_id = lista_tarefas_id + '<li>' + vetor_adicionar_item.pop() +'</li>'
+                    document.getElementById('listaTarefas').innerHTML= lista_tarefas_id
+                    console.log('cinza1')
+                }else if(nova_tarefa!= ''){
+                    console.log('sss')
+                }
+            }
+                
+        </script>
+    </body>
+</html>

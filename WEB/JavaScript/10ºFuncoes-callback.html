@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt/br">
+<head>
+    <meta charset="UTF-8">
+    <title>Funções de callback</title>
+</head>
+<body>
+    <script>
+        function exibirArtigo(id, callbackSucesso, callbackErro){
+            //Lógica para recuperação do ID via requisição http
+            if(true){
+                callbackSucesso('funçoes de callback em JS', 'Funções de callback são muito utilizadas para fazer trativa de erro')
+            }else{
+                callbackErro("erro ao recuperar os dados")
+            }
+        }
+
+        var callbackSucesso = function(titulo, descricao){
+            document.write('<h1>'+ titulo + '</h1>')
+            document.write('<hr>')
+            document.write("<p>" + descricao + "</p>")
+        }
+        var callbackErro = function(erro){
+            document.write("<p><strong>ERROR</strong> " + erro +"</p>")
+        }
+        //chamada das funções anonimas
+        // não usa () depois da funçoes pois ele
+        exibirArtigo(1,callbackSucesso,callbackErro)
+        
+        // Não é muito usado dessa forma pela grande quantida de arugmentos que podem vir a usado
+        //exibirArtigo(1, function(){logica para seder sucesso},function(){lógica para se der erro} )
+
+
+    </script>
+</body>
+</html>

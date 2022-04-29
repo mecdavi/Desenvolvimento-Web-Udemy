@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt/br">
+    <head>
+        <title>Array Ordenação</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            var listaFrutas = Array()
+                listaFrutas[1]= 'banana'
+                listaFrutas[2]= 'maça'
+                listaFrutas[3]= 'pera'
+                listaFrutas[4]= 'abacate'
+            
+            var listasNumeros = Array()
+                listasNumeros[0]= 94
+                listasNumeros[1]= 13
+                listasNumeros[2]= 80
+                listasNumeros[3]= 65
+            console.log(listaFrutas.sort())
+             
+            console.log(listasNumeros.sort(ordenarNumeros))
+
+            function ordenarNumeros(a,b){
+                return a - b
+            }
+
+
+        </script>
+    </body>
+</html>

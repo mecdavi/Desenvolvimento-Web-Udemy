@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt/br">
+<head>
+    <meta charset="UTF-8">
+    <title>Dom Manipulando Classes</title>
+    <style>
+        .retangulo1{
+            border: 1px solid;
+        }
+        .retanguloEstilo2{
+            height: 250px;
+            width: 250px;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+            line-height: 250px;
+            background-color: gray;
+        }
+    </style>    
+    <script>
+        function alteraClase(estilo){
+            document.getElementById('retangulo1').className = estilo
+        }
+        function limparClasse(){
+            document.getElementById('retangulo1').className = 'retangulo1'
+        }
+    </script>
+</head>
+<body>
+
+    <div id="retangulo1" class="retangulo1">Modificando Classes</div>
+    <br>
+    <input type="button" value="Alterar estilo" name="" id="" onclick="alteraClase('retanguloEstilo2')" ondblclick="limparClasse()">
+</body>
+</html>

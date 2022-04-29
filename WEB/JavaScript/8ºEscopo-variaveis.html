@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt/br">
+<head>
+    <meta charset="UTF-8">
+    <title>Escopo</title>
+</head>
+<body>
+    <script>
+  // 3 Tipos de escopos: Global, função e o bloco
+        //global: pode ser usada em todo o escript.
+        var serie1 = 'Gto'
+        //bloco
+        if (true) {
+            //processo de hoisting, elevar uma variável de bloco para o escopo global
+            var serie2 = 'Lie to me'
+            document.write(serie)
+        }
+
+        function x(){
+            // somente disponível na function
+            var serie3 = 'House'
+        }
+
+    </script>
+</body>
+</html>

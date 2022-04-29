@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt/br">
+    <head>
+        <title>Array Inclusão</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            var listaFrutas = Array()
+                listaFrutas[1]= 'banana'
+                listaFrutas[2]= 'maça'
+                listaFrutas[3]= 'pera'
+                listaFrutas[4]= 'abacate'
+            console.log(listaFrutas)
+
+            listaFrutas.push('incluido no final')
+            listaFrutas.unshift('incluido no inicio')
+            // listaFrutas.pop()
+            // listaFrutas.shift()
+
+            var listaCoisas = Array()
+                listaCoisas['pessoas']=Array()
+                listaCoisas['frutas']=Array()
+
+                listaCoisas['pessoas'][0]='jhon'
+
+                listaCoisas['frutas'][0] = 'uva'
+
+            listaCoisas['frutas'].push('maça','pera')
+            listaCoisas['pessoas'].unshift('junior')
+            console.log(listaCoisas)
+
+            document.write(listaCoisas['pessoas'][1] + ' gosta de ' + listaCoisas['frutas'][2])
+
+        </script>
+    </body>
+</html>
