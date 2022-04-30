@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt/br">
+    <head>
+        <title>Conversor Numeros Romanos</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="estilo-conversor-Inteiros.css">
+    </head>
+    <body>
+        <div id="container">
+            <header>
+                <div id="cabecalho">
+                    <h1>Conversor Numeros Inteiros</h1>
+                    
+                    <!-- <button class='numerosInteiros'>Numeros Ineiros</button> -->
+
+                </div>    
+            </header>
+            <main>
+                <div id="conversor">
+                    <input type="text" name="" id="valorRecebido"><button type="button" onclick="calcularInteiro()">Converter</button>
+                    <p id="resultado">
+                    </p>
+                </div>
+            </main>
+        
+        </div>
+        <script>
+        function calcularInteiro(){
+
+            var num       = document.getElementById('valorRecebido').value
+            var milhares  = Math.floor(num/1000)
+            var centenas  = Math.floor((num%1000)/100)
+            var dezenas   = Math.floor(((num%1000)%100)/10)
+            var unidades  = Math.floor(((num%1000)%100)%10)
+            var resultado = null
+
+            var valores                 = Array()
+                valores['M']            = Array()    
+                valores['C']            = Array()    
+                valores['D']            = Array()    
+                valores['U']            = Array()    
+                valores ['valoreCasas'] = Array ()
+
+                    valores['M'][0] = ''
+                    valores['M'][3] = 'MMM'
+                    valores['M'][2] = 'MM'
+                    valores['M'][1] = 'M'
+
+                    valores['C'][0] = ''
+                    valores['C'][9] = 'CM'
+                    valores['C'][8] = 'DCCC'
+                    valores['C'][7] = 'DCC'
+                    valores['C'][6] = 'DC'
+                    valores['C'][5] = 'D'
+                    valores['C'][4] = 'CD'
+                    valores['C'][3] = 'CCC'
+                    valores['C'][2] = 'CC'
+                    valores['C'][1] = 'C'
+
+                    valores['D'][0] = ''
+                    valores['D'][9] = 'XC'
+                    valores['D'][8] = 'LXXX'
+                    valores['D'][7] = 'LXX'
+                    valores['D'][6] = 'LX'
+                    valores['D'][5] = 'L'
+                    valores['D'][4] = 'XL'
+                    valores['D'][3] = 'XXX'
+                    valores['D'][2] = 'XX'
+                    valores['D'][1] = 'X'
+
+                    valores['U'][0] = ''
+                    valores['U'][9] = 'IX'
+                    valores['U'][8] = 'vIII'
+                    valores['U'][7] = 'VII'
+                    valores['U'][6] = 'VI'
+                    valores['U'][5] = 'V'
+                    valores['U'][4] = 'IV'
+                    valores['U'][3] = 'III'
+                    valores['U'][2] = 'II'
+                    valores['U'][1] = 'I'
+
+                    escolhaSinal(unidades,'U')
+                    escolhaSinal(dezenas, 'D')
+                    escolhaSinal(centenas,'C')
+                    escolhaSinal(milhares,'M')
+
+                    function escolhaSinal(valor,fator){
+                        switch(fator){
+                        case 'M':
+                            valores['valoreCasas'].push(valores[fator][valor])
+                        break
+                        case 'C':
+                            valores['valoreCasas'].push(valores[fator][valor])
+                        break
+                        case 'D':
+                            valores['valoreCasas'].push(valores[fator][valor])
+                        break
+                        case 'U':
+                            valores['valoreCasas'].push(valores[fator][valor])
+                        break
+                        }
+                    }
+                    resultado = valores['valoreCasas'].pop() + valores['valoreCasas'].pop() + valores['valoreCasas'].pop() +valores['valoreCasas'].pop()
+                    return document.getElementById('resultado').innerHTML = resultado
+        }  
+        </script>
+    </body>
+</html>
