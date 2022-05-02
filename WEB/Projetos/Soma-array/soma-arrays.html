@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt/br">
+    <head>
+        <title>Conversor Numeros Romanos</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="estiloSoma.css">
+    </head>
+    <body>
+        <div id="container">
+            <header>
+                <div id="cabecalho">
+                    <h1>Soma Array</h1>
+                    <p>Retorna a posição dos indíces que a soma foi realizada</p>
+                </div>
+            </header>
+            <main>
+                <div id="conteudo" >
+                    <input type="text" name="" id="target" placeholder="Alvo"><input type="text" name="" id="valorArray" placeholder="sequência de numeros">
+                    <button onclick="somaVetores()">Calcular</button>
+                    <h3>Indíces dos Elementos Somados</h3>
+                    <p id="resultadoFinal"></p>
+                    <h3>Vetor Usado</h3>
+                    <p id="arrays" ></p>
+                </div>
+            </main>
+        </div>
+        <script>
+            function somaVetores(){
+            var nums            = Array.from(document.getElementById('valorArray').value)
+            var target          = parseInt(document.getElementById('target').value)
+            var resultado       = null
+            var resultadofinal  = null
+            var tamanho         = nums.length
+            var elementos       = Array()
+
+            document.getElementById('valorArray').value = ''
+            document.getElementById('target').value = ''
+            
+            for(i = 0; resultado != target ; i++){
+                for (f = 1; f != tamanho; f++){
+                    if((parseInt(nums[i]) == parseInt(nums[f])) && (i == f) == true){
+                        f++
+                    }else if(resultado != target){
+                        resultado = parseInt(nums[i]) + parseInt(nums[f])
+                        resultadofinal = [i,f]
+                    }else{
+                        break
+                    }
+                }
+             }
+             document.getElementById('resultadoFinal').innerHTML = '['+resultadofinal+']'
+             document.getElementById('arrays').innerHTML = '['+nums+']'
+             return 
+            }
+        </script>
+    </body>
+</html>
