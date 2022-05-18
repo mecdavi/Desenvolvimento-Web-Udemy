@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Mata Mosca</title>
+        <script src='jogo.js'></script>
+        <link rel="stylesheet" href="css/estilo.css">
+    </head>
+    <body onresize="ajustarTamanhoTela()" >
+        <div id='painel'>
+            <div class="barraVida">
+                <img id="vida1" src="imagens/coracao_cheio.png" alt="">
+                <img id="vida2" src="imagens/coracao_cheio.png" alt="">
+                <img id="vida3" src="imagens/coracao_cheio.png" alt="">
+            </div>
+            <div class="cronometro">tempo restante: <span id="contador"></span> </div>
+        </div>
+        <script>
+            var contador =  setInterval(function(){
+                document.getElementById('contador').innerHTML = tempo            
+            })
+            moverMosca()
+            
+            var nivel = window.location.search
+            nivel === '?normal' ? nivel = 1500 : nivel === '?dificil'? nivel = 1000 : nivel = 750
+
+            setInterval(moverMosca,nivel)
+        </script>
+    </body>
+</html>
