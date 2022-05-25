@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>POO-Abstração</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            let cifrao = 'R$ '
+            class ContaBancaria {
+                //agencia
+                // saldo
+                // numeroConta
+                // limite
+                constructor(){
+                    this.agencia = 1512
+                    this.saldo = 50
+                    this.numeroConta = 5959595494
+                    this.limite = 450
+                }
+                depositar(valorDepositado) {
+                    this.saldo += valorDepositado
+                }
+                sacar(valorSaque){
+                    this.saldo -= valorSaque
+                }
+                consultarSaldo(){
+                    return this.saldo
+                }
+            }            
+                
+            let dadosConta = new ContaBancaria()
+            dadosConta.depositar(50)
+            dadosConta.sacar(35)
+            
+            console.log(cifrao + dadosConta.consultarSaldo())
+            
+
+
+
+        </script>
+    </body>
+</html>
