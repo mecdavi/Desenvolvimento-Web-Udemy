@@ -5,86 +5,208 @@
 }
 body{
     font-size: 1em;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family:sans-serif;
     background: url('imagens/fundo.png') repeat-x;
 }
 
-/* -------------------------- Layout -------------------------- */
+/* ----------------------------------------------------- Layout --------------------------------------------------- */
 #container{
     margin: 0px auto;
     width: 750px;
     padding: 25px;
     background:  url('imagens/detalhe-topo.png') no-repeat right top;
 }
-
-/* #cabecalho{
-    height: 150px;
-} */
-#cabecalho ul{
+/* --------------------- cabeçalho -------------------------- */
+#cabecalho ul li{
     margin-top: 30px;
     float: left;
     background:#b10333 ;
 }
-#cabecalho ul a{
-    display: block;
-    padding: 0.5em 1.5em;
-    color: aliceblue;
-    font-weight: 600;
-    background: url('imagens/divisor.png') no-repeat left;
 
-}
-#navegacaoTopo~li a{
-    background:none;
-}
-#cabecalho ul li{
+#cabecalho ul{
     float: left;
-
 }
+
+#cabecalho ul a{
+    display: flex;
+    font-size: 0.9em;
+    padding:  1.2em 1.5em;
+    color: aliceblue;
+    background: url('imagens/divisor.png') no-repeat left;
+}
+
 .logo{
     width: 152px;
     height: 66px;
     background:url('imagens/logo.png') no-repeat center;
 }
-.barrasLaterais{
-    border: 1px solid;
-    width: 200px;
-    background:url('imagens/fundo-caixa.png');
 
+#navegacaoTopo li.imagemSeparador a{
+    background:none;
 }
-.clear{
-    clear: both;
+
+body.home #navegacaoTopo a#cor {
+    background-color: #de003e;
+    color: #ffffff;
+    cursor: default;
 }
+
+#navegacaoTopo a:hover{
+    color: #800c2d;
+}
+
+/* --------------------------------- Conteudo ------------------------------------ */
+
+#conteudo{
+    float: left;
+    margin-top: 60px;
+}
+
+#conteudo-secundario{
+    width: 270px;
+    float: left;
+    margin:0px 0 20px 15px;
+}
+
+#conteudo-primario{
+    width: 270px;
+    float: left;
+    margin: 0px 0px 20px 195px;
+}
+
+#duas-colunas #conteudo-primario{
+    width: 555px;
+}
+
+#uma-coluna #conteudo-primario, #uma-coluna #conteudo-secundario{
+    width: 750px;
+    margin: 0px 0px 20px 0px;
+}
+
+#navegacao-lateral{
+    padding: 5px;
+    float: left;
+    width: 170px;
+    margin: 0 0px 20px -750px;
+}
+
+#rodape{
+    color:#ffffff ;
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(51, 118, 206);
+}
+
+/* -------------------- Formatação barras Laterais --------------- */
+
+#navegacao-lateral ul a{
+    font-size: 0.9em;
+    line-height: 30px;
+    padding: 3px;
+    display: block;
+    color: black;
+    border-bottom: 1px solid #f3f3f3;
+}
+
+#navegacao-lateral ul a:hover{
+    background: url('./imagens/marcador.png')no-repeat center left ;
+    padding-left: 20px;
+    color: #a1a1a1;
+}
+/* --------------------- Formatação caixa-Noticias-lateral --------------------- */
+label{
+    display: block;
+    cursor:pointer;
+}
+
+input{
+    font-size: 0.9em;
+    background-color: #ffffff;
+    width: 125px;
+    padding: 5px;
+}
+
+input.submit{
+    width: 80px;
+    color: #fff;
+    background-color: #b10333;
+    border: 2px solid #870529;
+}
+/* --------------------- Formatação Conteudo Primário --------------------- */
+
+
+
 
 /* ---------------- Gerais ------------------- */
+
 h1{
     text-indent: -3000px;
 }
+
 ul{
     list-style: none;
     margin: 0;
     padding: 0;
 }
+
 a{
     text-decoration: none;
 }
+
 h2{
+    font-size: 1em;
     padding: 5px;
     color: #ffffff;
-    background-color: rgba(49, 49, 161, 0.993);
+    background-color: #294c71;
+}
+/* cabeçalhos conteudos */
+h3{
+    text-transform: uppercase;
+    display:inline;
+    font-size: 0.8em;
+    padding: 3px;
 }
 
-#cabecalho  #navegacaoTopo .cor a{
-    background-color: rgb(245, 44, 44);
+.destaque h3{
+    background: #b10333;
+    color: white;
+
 }
-.barrasLaterais ul li{
-    background-color:#ffffff;
-    width: 180px;
-    margin: 0px auto;
+.entrevistas h3{
+    background: #de003e;
+
 }
 
-.barrasLaterais a:link, .barrasLaterais a:visited{
-    padding: 10px;
-    display: block;
+img{
+    border: 2px solid #dfdfdf;
+}
+
+.caixa{
+    background:#f3f3f3  url('imagens/fundo-caixa.png');
+    margin: 10px 0px;
+    padding: 5px;
+}
+
+.caixa-conteudo{
+    background: #f3f3f3;
+    padding: 5px;
+    margin-top: 5px;
+}
+/* Links da caixa 'Mundo' */
+.links li{
+    padding: 2px;
+    border-bottom: 1px solid #ccc;
+    height: 65px;
+}
+.links li a img{
+    float: left;
+    margin: 5px;
+}
+.links a p{
+    font-size: 0.8em;
     color: black;
 }
-
+.links a h3{
+    color: #294c71;
+    padding: 0;
+}
