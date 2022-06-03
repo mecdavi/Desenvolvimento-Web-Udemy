@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt/br">
+    <head>
+        <title>Conversor Numeros Romanos</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            var strs               = ["flower","flow","flig",'fli','flo']
+            var quantidadePalavras   = strs.length -1
+            var letrasContador     = 0
+            var vetor              = Array()
+            var letrasAtual        = null
+            var resultadofinal     = ''
+            var vetor2             = Array()
+            var tamanho            = null
+            var proximaPalavra     = 1
+            var contador           = 0 
+
+            for( var palavraAtual = 0 ; palavraAtual < quantidadePalavras; palavraAtual++){
+                letrasAtual = strs[palavraAtual].length
+                // console.log(vetor)
+                    for(var proximaLetra = 0;proximaLetra<letrasAtual;proximaLetra++){
+
+                        if(strs[palavraAtual].charAt(proximaLetra) == strs[proximaPalavra].charAt(proximaLetra)){
+                            vetor.push(strs[palavraAtual].charAt(proximaLetra))
+                            // console.log(vetor + 'primeira palavra')
+                        }else if(strs[palavraAtual].charAt(proximaLetra) != strs[proximaPalavra].charAt(proximaLetra)){
+                            break
+                        }else if((strs[palavraAtual].charAt(proximaLetra) == strs[proximaPalavra].charAt(proximaLetra)&& palavraAtual == quantidadePalavras)){
+                            tamanho = vetor.length
+                            while(tamanho != contador){
+                            if(vetor[proximaLetra] == strs[proximaPalavra].charAt(proximaLetra)){
+                                console.log(vetor)
+                            }else if(vetor[proximaLetra] != strs[proximaPalavra].charAt(proximaLetra)){
+                                vetor.pop()
+                                contador ++
+                            }
+                        }
+                        }
+                    }
+                    
+                   proximaPalavra++ 
+               }
+                // console.log(vetor)
+                // console.log( vetor2.join())
+                // console.log(resultadofinal)
+        </script>
+    </body>
+</html>

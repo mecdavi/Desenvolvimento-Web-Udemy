@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt/br">
+    <head>
+        <title>Conversor Numeros Romanos</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <input type="text" name="" id="valor">
+        <input type="button" onclick="descobrirValor(document.getElementById('valor').value,document.getElementById('tentativas'))" name="" value="OK" id="">
+        <p id="tentativas"></p>
+        <script>
+            
+            var doSearch = function(array, targetValue) {
+                var min = 0;
+                var max = array.length - 1;
+                var guess;
+                
+                    while( guess !== targetValue){
+                        guess = Math.floor(max/min)
+                        if(guess === targetValue){  
+
+                        }
+                        else if(max<min){
+                            console.log('lo quere passo')
+                            break
+                        }
+                        else{  }
+                    }
+                return -1;
+            };
+            
+            
+            
+            
+            
+            // function descobrirValor(valor,resultado){
+                
+            //     var min = 1
+            //     var max = 100
+            //     var med = (min/max)
+            //     var adivinhação = Math.floor(Math.random()*100)  
+            //     var numeros = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+            //     var premiado = Math.floor(Math.random()*20)
+            //     var contagem = 0
+
+            //     if(valor == premiado){
+            //         resultado.innerHTML = 'Voce pegou o Bilhete premiado!!'
+            //     }else if(valor<premiado){
+            //         console.log('O premiado é maior')
+            //     }else{
+            //         console.log('O premiado é menor')
+            //     }
+
+            //     console.log(premiado)
+                
+            //     // if(valor == )
+                        
+            // }
+        </script>
+    </body>
+</html>

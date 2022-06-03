@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>POO-Objetos Literais</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            isNarcissistic(1634)
+
+            function isNarcissistic(n) {
+let num = n.toString()
+  let num2 =''
+  for (let i = 0; i <=(num.length - 1) ; i++){
+    num2 = eval(num2 + Math.pow(num.charAt(i),3))
+    }
+  return console.log(num2 == n ? true:false)
+  }
+
+        </script>
+    </body>
+</html>
