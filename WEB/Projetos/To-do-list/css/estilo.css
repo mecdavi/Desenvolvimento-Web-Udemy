@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 1em;
+    font-family:'Times New Roman', Times, serif;
+}
+/*  ------------------ Layout------------------ */
+#container{
+    text-align: center;
+    margin: 0px auto;
+}
+#cabecalho{
+    height: 160px;
+    background-color: rgb(255, 70, 52);
+}
+
+div{
+    width: 768px;
+}
+input.input_tarefa{
+    width: 500px;
+    text-align: center;
+}
+input.botao_adicionar{
+    width: 150px;
+}
+
+h1{
+    padding-top: 20px;
+    font-size: 3em;
+    color: aliceblue;
+}
+
+input, ul li{
+    height: 40px;    
+}
+
+.botao_feito{
+    width: 60px;
+    background: rgb(104, 206, 94);
+}
+.botao_tirar{
+    width: 35px;
+    background: rgb(247, 82, 82);
+    margin-left: 2px;
+
+}
+.botao_feito,.botao_tirar{
+    font-weight: 700;
+    color: #ffff;
+    font-family: 'Courier New', Courier, monospace;
+}
+.item_estilo,.botao_feito,.botao_tirar{
+    margin-top: 5px;
+}
+.item_estilo{
+    float: left;
+    width: 650px; ;
+
+}
+ul#listaTarefas li{
+    background: rgb(231, 231, 231);
+    text-align: left;
+    font-size: 1.2em;
+    line-height: 40px;
+    padding: 0px 10px;
+
+}
+ul#listaTarefas{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
