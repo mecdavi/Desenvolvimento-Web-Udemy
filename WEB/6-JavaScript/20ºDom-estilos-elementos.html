@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt/br">
+    <head>
+        <title>Dom Estilos dos elementos</title>
+        <meta charset="utf-8">
+        <style>
+            h1{
+                font-family: 'Courier New', Courier, monospace;
+            }
+            input{
+                margin: 20px;
+            }
+            #corVermelho{
+                color:aliceblue;
+                background-color: red;
+            }
+            #corVerde{
+                color: aliceblue;
+                background-color: green;
+            }
+            #corAzul{
+                color: antiquewhite;
+                background-color: #000d80;
+            }
+            div{
+                margin-left: 20px;
+            }
+        </style>
+        <script>
+            function alteraCor(cor){
+                document.getElementById('retangulo').style.backgroundColor = cor
+            }
+            function limparCor(){
+                document.getElementById('retangulo').style.backgroundColor = ''
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Manipulando estilo</h1>
+        
+        <!-- poderia ter usado tbm button -->
+        <input type="button" value="Vermelho" name="" id="corVermelho" onclick="alteraCor('#ff0000')" ondblclick="limparCor()">
+        <input type="button" value="Verde" name="" id="corVerde" onclick="alteraCor('#008000')" ondblclick="limparCor()">
+        <input type="button" value="Azul" name="" id="corAzul" onclick="alteraCor('#000d80')" ondblclick="limparCor()">
+
+        <div id="retangulo" style="width: 250px;height: 200px; border: 1px solid;"></div>
+    </body>
+</html>

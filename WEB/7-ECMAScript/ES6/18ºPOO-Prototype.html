@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            // obj literal
+            let av1 = {
+                modelo : 'boeing 347',
+                companhia :'Embraer',
+                decolar(){console.log(`decolar ${this.modelo} da companhia ${this.companhia} `)}
+            }
+            // funcão construtora
+            let av2 = function(){
+                this.modelo = 'Airbus A340'
+                this.companhia = 'Airbus'
+
+                this.decolar = function(){
+                    console.log(`decolar ${this.modelo} da companhia ${this.companhia} `)
+                }
+            }
+            // Classe
+            class av3{
+                constructor(){
+                modelo = 'boeing 777'
+                companhia = 'Gol'
+                }
+                decolar(){
+                    console.log(`decolar ${this.modelo} da companhia ${this.companhia} `)
+                }
+            }
+
+
+        </script>
+    </body>
+</html>

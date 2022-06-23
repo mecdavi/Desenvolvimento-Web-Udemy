@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>POO-Encapsulamento</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            class Televisao{
+                constructor(){
+                    
+                    this._relacaoCanais = Array(2,4,7,10)
+                    this._canalAtivo    = 5
+                    this._volume        = 21
+                }
+
+                get canalAtivo(){
+                    return this._canalAtivo
+                }
+
+                set canalAtivo(canal){
+                    if(this._relacaoCanais.indexOf(canal) !== -1){
+                        this._canalAtivo = canal
+                    }else{
+                        console.log('esse canal não existe')
+                    }
+                }
+            }
+            
+            let televisao = new Televisao()
+            console.log(televisao.canalAtivo)
+            televisao.canalAtivo = 8
+            console.log(televisao.canalAtivo)
+            
+        </script>
+    </body>
+</html>

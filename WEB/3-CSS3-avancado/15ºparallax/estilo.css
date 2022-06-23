@@ -1,0 +1,71 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+body{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1em;
+}
+html,body{
+    height: 100%; /* para a imagem ocupar toda a tela, não so o tamanho da div*/
+}
+/* -------------- estrutura ---------------- */
+
+.conteudo{
+    color: #777;
+    background-color: white;
+    text-align: justify;
+    padding: 50px 80px;
+}
+h2{
+    text-transform: uppercase;
+    color: #111;
+    text-align: center;
+}
+p{
+    padding:30px;
+}
+.conteudo1{
+    background: url('./imagens/imagem1.jpg');
+}
+.conteudo2{
+    background: url('./imagens/imagem2.jpg');
+}
+.conteudo3{
+    background: url('./imagens/imagem3.jpg');
+}
+.conteudo4{
+    background: url('./imagens/imagem5.jpg');
+}
+.conteudo5{
+    background: url('./imagens/imagem4.jpg');
+}
+.conteudo6{
+    background: url('./imagens/imagem6.jpg');
+}
+
+.conteudo1,.conteudo2,.conteudo3,.conteudo4,.conteudo5,.conteudo6{
+    height: 100%;
+    opacity: 0.8;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.conteudo-titulo{
+    position: absolute;
+        top: 45%;
+        left:0%;
+    text-align: center;
+    width: 100%;
+
+}
+.titulo{
+    letter-spacing: 5px;
+    padding: 18px;
+    color: white ;
+    font-weight: 700;
+    background-color: #111;
+}

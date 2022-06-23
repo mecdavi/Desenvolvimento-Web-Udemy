@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>POO-Herança</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            
+            class Animal{ //classe pai
+                constructor(){
+                    this.cor     = ''
+                    this.tamanho = null
+                    this.peso    = null
+                }
+                dormir(){
+                    console.log('dormir')
+                }
+            }
+
+            class Cachorro extends Animal { //clase Filha
+                constructor(){
+                    super()
+                    this.orelhas = 'longas e caidas'
+                }
+                rosnar(){
+                    console.log('rosnar')
+                }
+                correr(){
+                    console.log('correr')
+                }
+            }
+
+            class Coruja extends Animal{
+                constructor(){
+                    super()
+                    this.bico ='curto'
+                }
+                voar(){
+                    console.log('voar')
+                }
+            }
+
+            class Papagaio extends Coruja{ //Herdou atributos e metodos da classe Animal e Coruja
+                constructor(){
+                    super()
+                    this.falar = true
+                }
+            }
+
+            let cachorro = new Cachorro()
+            let coruja   = new Coruja()
+            let papagaio = new Papagaio()
+
+            cachorro.dormir()
+            cachorro.cor = 'branco e marrom'
+            coruja.cor   = 'branco e marrom'
+
+            console.log(cachorro.cor)
+            console.log(coruja.cor)
+
+            papagaio.bico = 10
+
+            console.log(papagaio.bico)
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Var - Let</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            // var valor = '1' = disponivel para a função e escopos de bloco(ifs)
+            
+            function x(){
+                console.log(valor)
+                // var valor = '1' = somente no bloco da funçao e if dentro dele
+                if(true){
+                // var valor = '1' = ele sofre rosting, ficando disponível para a função
+                    console.log(valor)
+                }
+            }
+
+            if(true){
+                // let valor = '1' = disponível somente no bloco ifg
+                // var valor = '1' = ele sofre rosting, ficando disponível globalmente
+                console.log(valor)
+            }
+        </script>
+    </body>
+</html>

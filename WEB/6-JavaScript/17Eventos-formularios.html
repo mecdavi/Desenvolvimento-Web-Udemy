@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt/br">
+    <head>
+        <title>Eventos Formulários</title>
+        <meta charset="utf-8">
+        <script>
+            function preenchaCampos(nota){
+                var foco = document.getElementById('focado')
+                var cor = document.getElementById('cordefundo')
+                switch(nota){
+                    case 'nofoco':
+                        cor.style.backgroundColor = '#bbbbbb'                               
+                        break
+                    case 'semfoco':
+                        cor.style.backgroundColor = '#ffffff'
+                        break
+                }       
+                function opcoes(estado){
+                    var estadopr = document.getElementById("opcaopr")
+                    var estadosp = document.getElementById("opcaosp")
+                    var estadomt = document.getElementById("opcaomt")
+                    var estadomg = document.getElementById("opcaomg")
+
+                }
+            }
+        </script>
+    </head>
+    <body id="cordefundo">
+        <!-- trigger apos selecionar o elemento -->
+        <h3>onfocus</h3>
+        <input onfocus="preenchaCampos('nofoco')" onblur="preenchaCampos('semfoco')" style="display: flex; margin-bottom: 20px;"  type="text" name="" id="focado">
+        <!-- no onblur caso seja sai do campo ele dará trigger -->
+
+        <select onchange="opcoes()" name="" id="">
+            <option value="">Selecione</option>
+            <option id="opcaopr"value="pr">PR</option>
+            <option id="opcaosp"value="sp">SP</option>
+            <option id="opcaomt"value="mt">MT</option>
+            <option id="opcaomg"value="mt">MG</option>
+        </select>
+    </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt/br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Arrays</title>
+    </head>
+    <body>
+        <p id="mostrarTela"></p>        
+        <br>
+        <br>
+        <p id="todosIndices"></p>
+    <script>
+        var teto = 0
+        
+        // indice começa no 0
+        //var lista_Frutas = Array ['banana,maça,uva,kiwi']
+        // var lista_Frutas = Array ('banana,maça,uva,kiwi')
+        var lista_Frutas = Array ()
+            lista_Frutas[1] = 'Banana'
+            lista_Frutas[2] = 'Maça'
+            lista_Frutas[3] = 'Uva'
+            lista_Frutas[4] = 'Kiwi'
+
+        function pop(){
+            return lista_Frutas[1] + ' ' + lista_Frutas[2]
+        }
+
+        function pop2(){
+            if (teto != 0){
+               teto = teto +1
+            }else{
+                teto = teto +1
+            }
+            return lista_Frutas[teto] +" "
+        }
+
+        document.getElementById('mostrarTela').innerHTML = pop()
+        // document.getElementById('todosIndices').innerHTML = pop2()
+
+        console.log(pop2())
+        console.log(pop2())
+        console.log(pop2())
+        console.log(pop2())
+
+        document.getElementById('todosIndices').innerHTML = pop2()
+
+    </script>
+    </body>
+</html>

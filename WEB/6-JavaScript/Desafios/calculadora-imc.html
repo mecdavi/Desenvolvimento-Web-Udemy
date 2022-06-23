@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt/br">
+    <head>
+        <title>Calculadora de Imc</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            function mostrar(conteudos){
+                document.write(conteudos)
+                document.write("<br>")
+            }
+
+            var seuNome = prompt("Digite seu nome:")
+            var suaAltura = prompt("Digite sua altura (altura em centímetros):")
+            var seuPeso = parseInt(prompt("Digite seu peso:"))
+            var resultado = null
+            //casting altura cm para m.
+            suaAltura = parseFloat(suaAltura/100)
+            // math.pow é a instrução para elevar uma base de acordo com o expoente.
+            seuImc = parseFloat(seuPeso / Math.pow(suaAltura, 2))
+
+            if(seuImc < 16){
+                resultado = "Baixo peso muito grave "
+            }else if(16 <= seuImc && seuImc < 16.99){
+                resultado = 'Baixo peso grave '
+            }else if(17 <= seuImc && seuImc < 18.49){
+                resultado = 'Baixo peso '
+            }else if(18.50 <= seuImc && seuImc <= 24.99){
+                resultado = 'Peso normal '
+            }else if(25 <= seuImc && seuImc <= 29.99){
+                resultado = "Sobrepeso "
+            }else if (30 <= seuImc && seuImc <= 34.99){
+                resultado = "Obesidade grau I "
+            }else if (35 <= seuImc && seuImc <= 39.99){
+                resultado = "Obesidade grau II "
+            }else if (seuImc >= 40){
+                resultado = "Obesidade grau III "
+            }
+            mostrar(seuNome + " Possui índice de massa corporal igual a " + seuImc.toFixed(2) +", sendo classificado como: " + resultado)
+        </script>
+    </body>
+</html>

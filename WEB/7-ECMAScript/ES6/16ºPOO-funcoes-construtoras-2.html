@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            //carro com função construtora
+            let Carro = function(){
+                this.cor               = 'Amarelo'
+                this.modelo            = 'Chevette'
+                this.velocidadeAtual   = 0
+                let velocidadeMaxima   = 180
+                let quilometrosRodados = 0
+
+                this.acelerar = function(){
+                    let velocidade = this.getVelocidadeAtual() + 50
+                    if(velocidade>velocidadeMaxima){
+                        velocidade = velocidadeMaxima +' ele não acelera mais que isso'
+                    }
+                    this.setVelocidadeAtual(velocidade)
+                    setQuilometrosRodados(0.7)
+                    console.log(quilometrosRodados)
+                }
+                this.getVelocidadeAtual = function(){
+                    return this.velocidadeAtual
+                }
+                this.setVelocidadeAtual = function(velocidadeAtual){
+                    this.velocidadeAtual = velocidadeAtual
+                }
+                var setQuilometrosRodados = function(q){
+                    quilometrosRodados += q
+                }
+            }
+                let carro = new Carro()
+                console.log(`${carro.getVelocidadeAtual()}`)
+                carro.acelerar()
+                carro.acelerar()
+                carro.acelerar()
+                carro.acelerar()
+                //atributo velocidadeMaxima não pode ser acessa aqui, for da função
+                console.log(`carro1 ${carro.getVelocidadeAtual()}`)
+
+                
+
+        </script>
+    </body>
+</html>

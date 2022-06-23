@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>POO-Polimorfismo</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            class Animal{ //classe pai
+                constructor(cor, tamanho, peso){
+                    this.cor     = cor
+                    this.tamanho = tamanho
+                    this.peso    = peso
+                }
+                dormir(){
+                    console.log('dormir')
+                }
+            }
+            
+            class Coruja extends Animal{
+                constructor(bico, cor, tamanho, peso){
+                    super(cor, tamanho, peso)
+                    this.bico = bico
+                }
+                voar(){
+                    console.log('voar')
+                }
+            }
+            
+            class Papagaio extends Coruja{ //Herdou atributos e metodos da classe Animal e Coruja
+                constructor(fala, bico, cor, tamanho, peso){
+                    super(bico, cor, tamanho, peso) //acesso ao constructor classe pai
+                    this.falar = fala
+                }
+            }
+
+            class Avestruz extends Papagaio{
+                constructor(fala, bico, cor, tamanho, peso){
+                super(fala, bico, cor, tamanho, peso)
+                }
+                voar(){
+                    console.log('não voa')
+                }
+            }
+
+            let papagaio  = new Papagaio(true,'médio','verde',10,200)
+            let coruja    = new Coruja('curto', 'marrom', 20, 1000)
+            let avestruz  = new Avestruz(false,'Comprido','preto',150,10000)
+
+            console.log(papagaio)
+            console.log(avestruz)
+            console.log(coruja)
+
+            avestruz.voar()
+
+
+        </script>
+    </body>
+</html>

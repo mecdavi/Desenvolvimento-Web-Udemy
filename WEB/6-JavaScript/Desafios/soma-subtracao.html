@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="Pt/br">
+    <head>
+        <title>Desafio</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            function mostrar(conteudo){
+                document.write(conteudo)
+                document.write("<br>")
+                document.write("<br>")
+            }
+            function calculo(primeiroNumero, segundoNumero, operacao){
+                switch(operacao){
+                    case'+':
+              //          return(primeiroNumero + segundoNumero)
+                        resultado=(primeiroNumero + segundoNumero)
+                        break
+                    case'-':
+                //        return(primeiroNumero - segundoNumero)
+                        resultado=(primeiroNumero-segundoNumero)
+                        break
+                    default:
+                        mostrar("operação inválida, por favor desligue seu computador")
+                        break
+                }
+                return resultado;
+            }
+            var primeiroNumero =parseFloat(prompt('Digite um numero'))
+            var operacao = prompt("Qual o tipo da operação(digite + para soma e - para subtração)")
+            var segundoNumero = parseFloat(prompt('Digite outro numero'))
+
+            mostrar('O resultado do calculo é : '+calculo(primeiroNumero,segundoNumero,operacao))
+
+        </script>
+    </body>
+</html>
