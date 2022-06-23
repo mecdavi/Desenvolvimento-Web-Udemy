@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            function numerosPares(...parametro){
+                let resultado =[]
+                parametro.forEach(indice => indice%2 == 1 ? resultado.push('impar') : resultado.push('par'))
+                
+                return console.log(resultado)
+            }
+
+            numerosPares(1,2,5,9,6,8)
+
+            function conta(parametro,...numeros){
+                let resultado = 0
+                numeros.forEach(indice => resultadone += parametro*indice)
+
+                return resultado
+            }
+
+            console.log(conta(5,2))
+
+        </script>
+    </body>
+</html>
