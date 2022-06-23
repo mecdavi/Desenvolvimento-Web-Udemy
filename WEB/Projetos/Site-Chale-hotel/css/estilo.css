@@ -1,0 +1,166 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    background: url('../imagens/bg.png');
+    margin: 15px;
+}
+
+/* ---------------- Layout -------------------- */
+#container{
+    background: #ede9cc url('../imagens/bg-container.png') repeat-y center top;
+    margin: 0 auto;
+    min-width: 740px;
+    max-height: 1180px;
+}
+
+#cabecalho{
+    background: #dbcd87;
+    height: 15.4em; /* proporcional ao tamanho do texto*/
+    min-height: 250px;
+    position: relative;
+}
+
+#area-logo{
+    width: 100%;
+    height: 250px;
+    background: url(../imagens/topo-imagem-principal3.png) no-repeat;
+    top: 0;
+    left:0;
+    z-index: 1;
+}
+.logo a{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 3;
+    background: url(../imagens/logo.png) no-repeat;
+    width: 151px;
+    height: 66px;
+    text-indent: -9000px;
+}
+#area-menu{
+    width: 450px;
+    height: 250px;
+    background: url(../imagens/topo-imagem-lateral.png) no-repeat;
+    position: absolute;
+    top: 0;
+    right:0;
+    z-index:2 ;
+}
+#conteudo-menu{
+    margin: 15px 15px 0px 90px;
+}
+#menu-locais{
+    border-top: 1px solid #b5ab56;
+    border-bottom: 1px solid #b5ab56;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 0.7em;
+    color: #8b8448;
+}
+#menu-locais .locais{
+    line-height: 2.1em;
+    float: left;   
+}
+a.reserva{
+    text-transform: uppercase;
+    background: #a29750;
+    float: right;
+    padding: 5px 10px;
+    color: #fff5b0;
+}
+#menu{
+    padding-top: 15px;
+}
+#menu img{
+    position: absolute;
+    top: 65px;
+    right: 15px;
+}
+
+ul#navegacao{
+    list-style:none;
+}
+ul#navegacao a{
+    text-transform: uppercase;
+    font-size: 0.8em;
+    color: #8b8448;
+    font-weight: 600;
+    line-height: 30px;
+    padding: 5px;
+}
+ul#navegacao a:hover, ul#lista-lateral a:hover{
+    background-color: #fdf6be;
+}
+
+/* ------------------------- conteudo ------------------- */
+#area-principal{
+    float: left;
+    width: 50%;
+    background: url('../imagens/bg-area-principal.png') repeat-x top left ;
+    padding: 15px 0px;
+}
+#area-lateral{
+    float: right;
+    width: 50%;
+    padding: 25px 0px;
+    background: url('../imagens/bg-area-lateral.png') repeat-x top left ;
+
+}
+.conteudo{
+    width: 90%;
+    margin: 0 auto;
+}
+#area-principal h2{
+    padding: 10px 0px;
+    color:#8b8448;
+    font-size: 1.2em;
+}
+ul#lista-lateral{
+    list-style: none;
+}
+#lista-lateral a h3{
+    font-size: 1.1em;
+    color:#8b8448;
+    padding: 5px 0px;
+    background: url('../imagens/ornamento.png') no-repeat right center;
+
+}
+#lista-lateral li{
+    padding: 8px;
+    border-bottom: 1px solid #f3efcb;
+    height: 97px;
+
+}
+#lista-lateral p{
+    font-size: 0.8em;
+    color: black;
+
+}
+#lista-lateral li a img{
+    float: left;
+    margin-right: 8px;
+}
+#lista-lateral a{
+    display: block;
+    height: 97px;
+    padding: 8px;
+}
+/* -------------------- rodape -------------------------- */
+#rodape{
+    clear: both;
+    padding: 16px;
+    background: #ffffff url('../imagens/bg-rodape.png') repeat-x top;
+    color: #8b8448;
+    text-align: center;
+}
+/* ---------- Gerais ----------- */
+
+a{
+    text-decoration: none;
+}
