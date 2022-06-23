@@ -1,0 +1,68 @@
+/* *{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+}
+/* -------------------------- Layout site -----_____------------------___-------___--------____----- */
+
+ul{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    float: left;
+    width: 720px;
+    background: url('/home/dekae/Área de trabalho/Udemy/WEB/CSS3-avançado/5ºbarra-horizontal/fundo-horizontal.png') repeat-x;
+    background-color: rgb(12, 148, 153);
+}
+ul li{
+    float:left;
+}
+.menus{
+}
+
+/* --------___------___-----____----___ LINKS -------____----____-----_____------_____----____--- */
+
+ul a{
+    font-size: 1.2em;
+    text-decoration: none;
+    display: block;
+    line-height: 2em;
+    text-indent: 10px;
+    background: url('/home/dekae/Área de trabalho/Udemy/WEB/CSS3-avançado/5ºbarra-horizontal/divisor.png') repeat-y;
+    padding: 0.2em;
+    
+}
+a:hover{
+    background-color: aquamarine;
+    color: rgb(10, 28, 77);
+}
+/* qulquer descente de ul que tenha classe primeiro- so vai afetar
+os links  */
+ul .primeiro a{
+    background: none;
+}
+a{
+    font-family: 'Courier New', Courier, monospace;
+}
+/* a{
+    font-size: 1.2em;
+    text-decoration: none;
+    display: block;
+    width: 200px;
+    height: 40px;
+    line-height: 50px;   
+    text-indent: 30px;
+} */
+
+
+
+.menus #home .home a,
+.menus #sobre .sobre a,
+.menus #contato .contato a
+{
+    color: aliceblue;
+    background-color: aquamarine;
+} 

@@ -1,0 +1,81 @@
+body{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1em;
+    
+}
+
+/* Layouts líquidos são diferentes de responsivos, eles se adaptam a diferentes tamanhos de 
+navegadores, não a diferetes dispositivos. */
+
+#container{
+    /* mudar o tamanho em px para %, aplicar regra de três para manter escalas. */
+    margin: 20px auto;
+    width: 85%;
+    min-width: 720px;
+    max-width: 960px;
+    
+}
+
+#marca{
+    background-color: grey;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    
+}
+
+#conteudo{
+    width: 73.16%;/*570px */
+    float: right;
+    background-color: #ffff
+}
+
+#conteudo .mat1{
+    float: left;
+    background-color:#ffff;
+    width: 61.4%;/*350px*/
+    padding: 10px;
+}
+#conteudo .mat2{
+    float: right;
+    width: 26.3%; /*150px*/
+    margin: 0px;
+    padding: 10px;
+    background-color: rgb(170, 170, 170);
+
+}
+#navegação{
+    width: 25%;/*180px*/
+    float: left;
+    margin: 0px;
+}
+#rodape{
+    clear: both;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    background-color: rgb(189, 185, 185);
+}
+/* -------------- links -------------------------------- */
+
+#navegação a{
+    text-decoration: none;
+    color: aliceblue;
+    display: block;
+    padding: 15px;
+    line-height: 15px;
+    text-align: center;
+    width: 25%px;
+    background-color: rgb(143, 143, 143);
+}
+
+#navegação a:hover{
+    color: gray;
+    background-color: thistle;
+
+}
+#navegação ul{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}

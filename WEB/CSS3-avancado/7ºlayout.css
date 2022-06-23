@@ -1,0 +1,77 @@
+body{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1em;
+    
+}
+
+#container{
+    margin: 20px auto;
+    width: 720px;
+    
+}
+
+#marca{
+    width: 720px;
+    background-color: grey;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    
+}
+
+#conteudo{
+    width: 570px;
+    float: right;
+    background-color: #ffff
+}
+
+#conteudo .mat1{
+    float: left;
+    background-color:#ffff;
+    width: 350px;
+    padding: 15px;
+}
+#conteudo .mat2{
+    float: right;
+    width: 150px;
+    margin: 0px;
+    padding: 15px;
+    background-color: rgb(170, 170, 170);
+
+}
+#navegação{
+    width: 130px;
+    float: left;
+    margin: 0px;
+}
+#rodape{
+    clear: both;
+    width: 720px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    background-color: rgb(189, 185, 185);
+}
+/* -------------- links -------------------------------- */
+
+#navegação a{
+    text-decoration: none;
+    color: aliceblue;
+    display: block;
+    padding: 15px;
+    line-height: 15px;
+    text-align: center;
+    width: 100px;
+    background-color: rgb(143, 143, 143);
+}
+
+#navegação a:hover{
+    color: gray;
+    background-color: thistle;
+
+}
+#navegação ul{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
