@@ -7,7 +7,7 @@
     function ajustarTamanhoTela(){
         larguraPagina = (window.innerWidth-90 <0 ? '0'   : window.innerWidth-90)
         alturaPagina  = (window.innerHeight -90 <0 ? '0' : window.innerHeight-90)
-    }
+    }   
     ajustarTamanhoTela()
 
     var contador =  setInterval(function(){

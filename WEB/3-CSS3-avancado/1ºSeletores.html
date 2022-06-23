@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Css/1º-Seletores.css">
+    <title>Seletores</title>
+</head>
+<body>
+    <!-- 
+        p.verde{}- apenas paragrafos com .verde
+     -->
+    <div>
+        <p class="verde">Crux sacra</p>
+        <p>aaaahhhh</p>
+    </div>
+    <br>
+    <div>
+    <!-- 
+        li>a{} - afeta links dentro de li, filhos diretos
+        seletor de filho
+     -->
+        <ul>
+            <li><a href="">yey of the tigar</a></li>
+            <li><a href="">aaaaaaaaaa</a></li>
+        </ul>
+            <a href="">kkkkkkkkk</a>
+    </div>
+    <br>
+    <!-- 
+        div a{} - afeta todos os links descentes da div, não so o filho
+     -->
+    <div class="descendente">
+        <ul>
+            <li><a href="">teste1</a></li>
+            <li><a href="">teste2</a></li>
+        </ul>
+        <a href="">fora-do-li</a>
+    </div>
+    <br>
+    <!-- 
+        h1+p{} afeta o proximo irmão de h1
+     -->
+    <div class="seletor-irmão-adjacente">
+        <h1>Titulo</h1>
+        <p>teste1</p>
+        <p>teste2</p>
+    </div>
+    <br>
+    <!-- h1~p{} seleciona todos os irmãos de h1 -->
+    <div class="Seletor-irmão-geral">
+        <h1>Titulo</h1>
+        <p>teste1</p>
+        <p>teste2</p>
+    </div>
+</body>
+</html>
