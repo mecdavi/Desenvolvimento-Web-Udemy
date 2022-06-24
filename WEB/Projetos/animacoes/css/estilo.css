@@ -1,0 +1,37 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: none;
+    font-family: 'Courier New', Courier, monospace;
+}
+body{
+    background: black;
+}
+:root{
+}
+
+@keyframes animate{
+    from{
+        background-color: #ccc;
+    }
+    to{
+        background-color: greenyellow;
+    }
+}
+#container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.worm{
+    background-color: #ccc;
+    width: 50px;
+    height: 20px;
+    float: left;
+    margin: 0px;
+
+    animation: animate 2s ease-in-out infinite;
+    animation-delay:calc(0.2s *var(--bloco))
+}
+
