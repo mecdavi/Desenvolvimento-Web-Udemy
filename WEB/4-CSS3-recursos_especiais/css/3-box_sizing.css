@@ -1,0 +1,12 @@
+#caixa{
+    background-color: crimson;
+    width: 320px;
+    height: 320px;
+    padding: 50px;
+    /* desconta o padding da div */
+    /* -moz-box-sizing: border-box; */
+    /* -webkit-box-sizing: border-box; */
+    box-sizing: border-box;
+    margin: 50px auto; 
+}
+

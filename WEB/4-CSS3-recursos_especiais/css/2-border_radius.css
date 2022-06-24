@@ -1,0 +1,13 @@
+#caixa{
+    background-color: crimson;
+    width: 250px;
+    height: 250px;
+    padding: 10px;
+    margin: 50px auto;
+    /* webkit-border-radius: versoes mais antigas do crhome */
+    /* -moz-border-radius: versoes mais antigas do mozila */
+    border-radius: 20px 90px;
+}
+.arredondar{
+    border-radius: 150%;
+}
