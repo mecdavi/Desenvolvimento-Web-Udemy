@@ -1,0 +1,45 @@
+body{
+    background: black;
+}
+@keyframes loading{
+    from{
+        box-shadow: 2px 2px 10px 5px green;
+    }
+    to{
+        box-shadow: 2px 20px 10px 5px green;
+    }
+}
+#caixa{
+    margin: 150px auto;
+    width: 300px;
+    height: 300px;
+    border-radius: 300px;
+    background: crimson;
+    transition: all 0.3s ;
+}
+
+#caixa:hover{
+    animation: loading 5s ;
+    /*  right top blur spread */
+    box-shadow: 2px 2px 10px 5px green;
+
+    /* width: 400px; */
+    /* height: 400px; */
+    /* background-color: orange; */
+}
+
+
+/* #caixa:hover{ */
+    /* width: 400px; */
+    /* background-color: orange; */
+    /* -webkit-transition: ; */
+    /* -moz-transition: ; */
+    /* -o-transition: ; */
+         /* 1- qual propriedade terá transição, 2- tempo, 3- colocar mais propriedades  */
+/*  */
+    /* transition: all 3s; */
+/*  */
+    /* transition: width 3s, background 2s; */
+/*  */
+/* } */
+

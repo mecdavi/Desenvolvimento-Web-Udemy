@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <link rel="stylesheet" href="./css/normalize.css">
+        <meta charset="utf-8">
+        <style>
+            :root{
+                --cormudada: ;
+                --direita:56% ; 
+            }
+            input,label{
+                margin-bottom: 10px;
+                margin-left: 20px;
+            }
+            input{
+                display: flex;
+            }
+            #corMudar{
+                border-radius: 100px;
+                width: 100px; 
+                height: 100px;
+                border: 1px solid black;
+                position: absolute;
+                    top:55%;
+                    left: 10%;
+                /* animation: mdcor 5s 1s alternate; */
+            }
+            @keyframes mdcor{
+                from{
+                    background-color: var(--cormudada);
+                    top:55%;
+                }
+                to{
+                    background-color: var(--cormudada);
+                    top: 65%;
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+        <form action="">
+            <label for="email">email</label>
+            <input type="email" id="email" required autofocus>
+
+            <label for="numero">Numero</label>
+            <input type="number" id="numero" min="5" max="10" step="52">
+
+            <label for="url">url</label>
+            <input type="url" id="url">
+
+            <label for="Pesquisa">Pesquisa</label>
+            <input type="search" id="Pesquisa" >
+
+            <label for="range">range</label>
+            <label id="rangeValue"></label>
+            <input type="range" onmousemove="mudar()" id="range" min='1'max="16" value="8" >
+
+            <label for="data">Data</label>
+            <input type="date" id="date" >
+
+            <label for="cor">cor</label>
+            <input type="color" onchange="corMuda()" id="cor" >
+            
+            <br><br>
+            <input type="submit" name="" value="enviar">
+
+            <div id="corMudar"></div>
+         </form>
+         <script>
+            function corMuda(){
+                // document.getElementById('cor').value
+                // document.getElementById('corMudar').style.backgroundColor = document.getElementById('cor').value
+                // document.documentElement.style.cssText = '--cormudada'
+                // document.getElementById('cor').value
+                // document.documentElement.style.setProperty = ('--cormudada',document.getElementById('cor').value)
+                document.getElementById('corMudar').style.cssText = '--cormudada:' + document.getElementById('cor').value
+                document.getElementById('corMudar').style.animationName = 'mdcor'
+                document.getElementById('corMudar').style.animationDelay = '0s'
+                document.getElementById('corMudar').style.animationDuration = '2s'
+                document.getElementById('corMudar').style.animationDirection = 'alternate'
+                document.getElementById('corMudar').style.animationIterationCount= 'infinite'
+
+                // document.getElementById('corMudar').style.cssText = '--direita:56%'
+
+                
+            }
+            function mudar(){
+                valor = document.getElementById('range')
+                rangevalor = document.getElementById('rangeValue')
+                rangevalor.innerHTML = valor.value
+            }
+         </script>
+    </body>
+</html>
