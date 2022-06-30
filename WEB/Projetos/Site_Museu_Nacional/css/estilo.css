@@ -1,0 +1,155 @@
+/* ------------- layout ------------------*/
+body{
+    background: #f4f2ec url('../imagens/fundo.png') repeat-x top left;;
+    font-size: 12px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#container{
+    width: 1080px; /* tamanho padrão de videos*/
+    margin: 0 auto;
+}
+header{
+    padding: 15px 0;
+    height: 55px;
+}
+#logo a{
+    width: 248px;
+    height: 21px;
+    text-indent: -9999px;
+    display: block; /* a é inline, propriedades de movimentação nao funcionam */
+    background: url('../imagens/logo.png')no-repeat;
+}
+#logo h1{
+    float: left;
+}
+/* ---------- Barra de navegação */
+
+nav li a{
+    display: block;
+    padding-bottom: 3px;
+    margin-right: 25px;
+    text-transform: uppercase;
+}
+nav ul {
+    list-style: none;
+    float: right;
+}
+nav li{
+    float: left;
+}
+
+nav ul li a:hover {
+    border-bottom:1px solid #535858;
+}
+
+/* -------------------- conteudo principal ------------- */
+article{
+    width: 710px;
+    float: left;
+    /* background-color: #227115; */
+}
+aside{
+    width: 350px;
+    float: right;
+    background-color: #f4f2ec;
+    margin-bottom: 20px;
+}
+#capa{
+    background: url('../imagens/museu.png');
+}
+section#visita{
+    background: #cdc8b1;
+    padding: 10px 27px 27px 27px;
+    margin-top: 10px;
+}
+h4{
+    color: #86521a;
+    text-transform: uppercase;
+    padding-bottom: 3px;
+    margin-bottom: 0;
+}
+/* formulários */
+input{
+    height: 20px;
+    background: white;
+    border: none;
+    font-size: 1em;
+}
+
+fieldset{
+    border: none;
+}
+
+form .enviar{
+    width: 296px;
+    height: 40px;
+    background-color:#afa293;
+    font-weight: 700;
+    color: #fff;
+}
+/* ----------- galeria de fotos ------------- */
+section#galeria a{
+    display: block;
+    background: url('../imagens/fundo-foto.png') no-repeat;
+    float: left;
+    padding: 18px;
+    margin: 10px 0 0 18px;
+}
+section#galeria{
+    padding: 0 27px 0 27px;
+}
+section#galeria img{
+    border-radius: 5px;
+}
+
+/* conteudos finais */
+
+h3{
+    color: #227115;
+    font-size: 1em;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+article#video{
+    float: left;
+    width:310px;
+    margin-left: 25px;
+
+}
+article#mapa{
+    float: right;
+    width: 310px;
+    margin-right: 37px;
+}
+
+article#historia{
+    float: right;
+    width: 310px;
+    margin:15px 37px 0 0px;
+}
+article#exposicoes{
+    float: left;
+    width: 310px;
+    margin:15px 0 0 25px;
+}
+
+/* -------- rodapé ----------- */
+
+footer{
+    padding: 20px 0 30px 0;
+    text-align: center;
+    background: url('../imagens/fundo-rodape.png') no-repeat center top;
+    margin-top: 20px;
+}
+
+/* Definições gerais */
+a:link, a:active, a:visited{
+    color: #af670a;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #227115;
+}
