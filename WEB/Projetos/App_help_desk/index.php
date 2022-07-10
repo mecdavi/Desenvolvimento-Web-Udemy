@@ -33,7 +33,9 @@
               Login
             </div>
             <div class="card-body">
+              <!-- chamada do script de validação de usauário -->
               <form action="valida_login.php" method="post">
+                <!-- metodo post para esconder dados usuário -->
                 <div class="form-group">
                   <input name="email" type="email" class="form-control" placeholder="E-mail">
                 </div>
@@ -45,7 +47,9 @@
                   if(isset($_GET['login']) && $_GET['login'] == 'erro'){ ?>
                 <div class="text-center text-danger mt-2"> Usuário ou senha inválido(s)</div>
                  <? } ?>
-                
+                <?php if(isset($_GET['login']) && $_GET['login'] == 'erro2'){ ?>
+                <div class="text-center text-danger mt-2">Pagína protegida, faça login para confirmar sua identidade.</div>
+                <? } ?>
               </form>
             </div>
           </div>

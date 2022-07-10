@@ -1,11 +1,12 @@
+<?php 
+  require_once('validador_acesso.php');
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
     <meta charset="utf-8" />
     <title>App Help Desk</title>
-
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
     <style>
       .card-home {
         padding: 30px 0 0 0;
@@ -18,7 +19,7 @@
   <body>
 
     <nav class="navbar navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="./home.php">
         <img src="logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
         App Help Desk
       </a>
@@ -35,10 +36,17 @@
             <div class="card-body">
               <div class="row">
                 <div class="col-6 d-flex justify-content-center">
-                  <img src="formulario_abrir_chamado.png" width="70" height="70">
+                  <a href="./abrir_chamado.php" class="text-center nav-link text-info">
+                    <img src="formulario_abrir_chamado.png " class="mb-1" width="70" height="70">
+                    <h5>Abrir chamado</h4>
+                    <!-- <div class="align-self-end" style="border:1px solid; margin: auto 0;">Abrir Chamado</div> -->
+                  </a>
                 </div>
-                <div class="col-6 d-flex justify-content-center">
-                  <img src="formulario_consultar_chamado.png" width="70" height="70">
+                  <div class="col-6 d-flex justify-content-center">
+                    <a href="./consultar_chamado.php" class="text-center nav-link text-info">
+                      <img src="formulario_consultar_chamado.png" class="mb-1" width="70" height="70">
+                      <h5>Consultar chamado</h5>
+                    </a>
                 </div>
               </div>
             </div>
