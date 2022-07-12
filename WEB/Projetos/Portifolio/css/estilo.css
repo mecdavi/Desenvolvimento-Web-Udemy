@@ -1,0 +1,36 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    font-size: 1em;
+}
+/*  -------- layout ---------------- */
+.caixa{
+    text-align: center;
+    width: 100%;
+    position: absolute;
+        top: 40%;
+        left: 0;
+}
+.titulo{
+    background-color: rgba(124, 124, 124, 0.61);
+    border-radius: 10px;
+}
+
+.conteudo1{
+    height: 100vh;
+    opacity: 1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.conteudo1{ 
+    background-image:url(../imagens/6955d2_fecbca0b23214bc48f1dc5acae4b3491_mv2.gif);
+}
+
+
