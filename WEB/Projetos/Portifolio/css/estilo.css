@@ -12,17 +12,24 @@ body{
     text-align: center;
     width: 100%;
     position: absolute;
-        top: 40%;
+        top: 25%;
         left: 0;
 }
 .titulo{
-    background-color: rgba(124, 124, 124, 0.61);
-    border-radius: 10px;
+    background-color: rgba(143, 143, 143, 0.548);
+    border-radius: 60px;
+}
+
+.conteudo1  h4{
+    width: 250px;
+    height: 250px;
+    text-indent: -9999px;
+    background: url('../imagens/logo.png')top center no-repeat;
+    background-size: contain;
 }
 
 .conteudo1{
     height: 100vh;
-    opacity: 1;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -30,7 +37,7 @@ body{
 }
 
 .conteudo1{ 
-    background-image:url(../imagens/6955d2_fecbca0b23214bc48f1dc5acae4b3491_mv2.gif);
+    background-image:url(../imagens/fundo1.jpg);
 }
 
 
