@@ -8,6 +8,10 @@ body{
     font-size: 1em;
 }
 /*  -------- layout ---------------- */
+
+#texto{
+    font-size: 1.1em;
+}
 .caixa{
     text-align: center;
     width: 100%;
