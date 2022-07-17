@@ -8,10 +8,6 @@ body{
     font-size: 1em;
 }
 /*  -------- layout ---------------- */
-
-#texto{
-    font-size: 1.1em;
-}
 .caixa{
     text-align: center;
     width: 100%;
@@ -44,4 +40,11 @@ body{
     background-image:url(../imagens/fundo1.jpg);
 }
 
-
+main#conteudo{
+    max-width: 1200px;
+    font-size: 1.1em;
+}
+h1,h5{
+    padding: 0;
+    margin: 0;
+}
