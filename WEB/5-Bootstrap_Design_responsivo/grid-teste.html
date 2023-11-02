@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            border: none;
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            background: rgb(214, 143, 255);
+        }
+        #container{
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            /* cria a quantida de colunas e sua largura */
+            /* 1fr = fração, nesse caso ele divide a tela em dois */
+             /* grid-template-columns: repeat(3,minmax(200px, 1fr)); */
+            /* min max => tamanho minimo da coluna e tamanho maximo */
+            /* quantida de colunas */
+            grid-template-rows: 16vh 70vh 14vh;
+            /* vh = visual height , dive a tela pelo tamamnho dela */
+
+            /* gap: 20px; */
+
+            /* divide as colunas em areas nomeaveis  */
+            grid-template-areas: 
+            /* colocar ponto apra deixar vazio */
+                'header header '
+                'main   aside  '
+                'footer footer '
+            ;
+        }
+           
+        header{
+            background: yellow;
+            /* height: 100px; */
+            /* grid-column: 1/3; */
+            grid-area: header;
+            /* grid column: onde a coluna começa e 2 */
+        }
+        main{
+            background: blue;
+            /* height: 100px; */
+            /* grid-column: 1/2; */
+            grid-area: main;
+        }
+        aside{
+            background-color: green;
+            /* height: 100px; */
+            grid-area: aside;
+        }
+        footer{
+            background-color: orange;
+            /* height: 100px; */
+            /* grid-column: 1/3; */
+            grid-area: footer;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="container">
+        <header></header>
+        <main></main>
+        <aside></aside>
+        <footer></footer>
+    </div>
+    
+</body>
+</html>
